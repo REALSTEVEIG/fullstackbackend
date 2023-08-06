@@ -37,7 +37,7 @@ export const createPost = async (req: Request, res: Response) => {
         const posts = await Post.find().populate('author');
 
         return res.status(200).json({
-            status: "success",
+            status: "Success!",
             posts,
         });
     } catch (error) {

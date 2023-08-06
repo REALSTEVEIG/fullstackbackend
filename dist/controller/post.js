@@ -43,7 +43,7 @@ const allPosts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         console.log(`Testing nginx.`);
         const posts = yield posts_1.Post.find().populate('author');
         return res.status(200).json({
-            status: "success",
+            status: "Success!",
             posts,
         });
     }
