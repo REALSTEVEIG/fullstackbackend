@@ -33,7 +33,7 @@ export const createPost = async (req: Request, res: Response) => {
 
   export const allPosts = async (req: Request, res: Response) => {
     try {
-        console.log(`Testing nginx.`)
+        console.log(`Testing nginx for load-balancing..`)
         const posts = await Post.find().populate('author');
 
         return res.status(200).json({

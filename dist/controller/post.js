@@ -40,7 +40,7 @@ const createPost = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 exports.createPost = createPost;
 const allPosts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(`Testing nginx.`);
+        console.log(`Testing nginx for load-balancing..`);
         const posts = yield posts_1.Post.find().populate('author');
         return res.status(200).json({
             status: "Success!",
